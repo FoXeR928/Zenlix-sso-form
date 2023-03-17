@@ -1,0 +1,111 @@
+body{
+    font-family: Helvetica, Arial, sans-serif;
+}
+.form{
+    display:flex; 
+    flex-direction: column;
+}
+.-input{
+    position: relative;
+    font-size: 14px;
+    display: block;
+    overflow: hidden;
+    padding: 0 8px 0 8px;
+    min-height: 26px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    background-color: #fff;
+    background: -webkit-gradient(linear,50% 0,50% 100%,color-stop(20%,#fff),color-stop(50%,#f6f6f6),color-stop(52%,#eee),color-stop(100%,#f4f4f4));
+    background: -webkit-linear-gradient(top,#fff 20%,#f6f6f6 50%,#eee 52%,#f4f4f4 100%);
+    background: -moz-linear-gradient(top,#fff 20%,#f6f6f6 50%,#eee 52%,#f4f4f4 100%);
+    background: -o-linear-gradient(top,#fff 20%,#f6f6f6 50%,#eee 52%,#f4f4f4 100%);
+    background: linear-gradient(top,#fff 20%,#f6f6f6 50%,#eee 52%,#f4f4f4 100%);
+    background-clip: padding-box;
+    box-shadow: 0 0 3px #fff inset, 0 1px 1px rgb(0 0 0 / 10%);
+    color: #444;
+    text-decoration: none;
+    line-height: 21px;
+}
+.btn{
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.btn-success{
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+.btn-default{
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+.conteiner{
+    padding: 20px 0px;
+}
+.status1{
+    background: #5cb85c;
+}
+.table {
+	width: 100%;
+	margin-bottom: 20px;
+    border-spacing: 0
+}
+.table thead th {
+	font-weight: bold;
+	text-align: left;
+	padding: 10px 15px;
+	background: #d8d8d8;
+	font-size: 14px;
+	border-left: 1px solid #d8d8d8;
+	border-right: 1px solid #d8d8d8;
+}
+.table tbody td {
+	border: 1px solid #d8d8d8;
+	padding: 10px 15px;
+	font-size: 14px;
+	vertical-align: top;
+    word-break: break-word;
+}
+.table tbody tr:last-child td{
+	border-bottom: 1px solid #d8d8d8;
+}
+.table tbody tr:last-child td:first-child {
+	border-radius: 0 0 0 20px;
+    width: 20%
+}
+.table tbody tr:last-child td:last-child {
+	border-radius: 0 0 20px 0;
+    width: 21%
+}
+.table thead tr th:first-child {
+	border-radius: 20px 0 0 0;
+    width: 20%
+}
+.table thead tr th:last-child {
+	border-radius: 0 20px 0 0;
+    width: 21%
+}
+.table tr th:first-child, .table tr td:first-child {
+	border: 1px solid #d8d8d8;
+}
+.table tr th:last-child, .table tr td:last-child {
+	border: 1px solid #d8d8d8;
+}
