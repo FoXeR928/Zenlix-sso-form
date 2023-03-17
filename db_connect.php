@@ -17,7 +17,7 @@
     $result_ticket_id=mysqli_fetch_array($query_ticket_id);
     $ticket_id=$result_ticket_id['id'];
 
-    $mail_msg="Новая заявка: https://zenlix.aoniti.ru/ZENLIX/ticket?$ticket_id";
+    $mail_msg="Новая заявка: http://zenlix/ticket?$ticket_id";
 
     $query_add_hash=mysqli_query($connect, "UPDATE tickets SET hash_name=$ticket_id WHERE id=$ticket_id");
     $query_add_ticket_info=mysqli_query($connect, "INSERT INTO ticket_info SET ticket_id='$ticket_id', ticket_source='web', ip='$ip', os='Windows',browser='Yandex'");
@@ -25,7 +25,7 @@
 
     mysqli_close($connect);
 
-    mail("example","Техподдержка",$mail_msg, 'From: zenlix@aoniti.ru');
+    mail("example","Техподдержка",$mail_msg, 'From: zenlix@mail.com');
     
     header('Location: form.php');
     exit;
