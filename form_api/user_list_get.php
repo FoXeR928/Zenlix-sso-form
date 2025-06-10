@@ -24,9 +24,12 @@
             $user_id=query_sql_array("SELECT id FROM users WHERE login='$name'")['id'];
             //проверка естьли пользователь в системе
             if($user_id==0){
+		 $user_tickets=null;
                 //отправка письма о добавление пользователя
                 mail($mail_list['it_admin'], $mail_header['mail_new_user'],sprintf($mail_text['mail_no_user'],$name), $mail_header['mail_from']);
-            }else{
+            }else if($user==null){
+	 	$user_tickets=null; 
+	    }else{
                 //запрос заявок пользователя
                 $user_tickets=query_sql_assoc(sprintf($query['get_tickets'],$user_id,$query_config['number_applications']));
             }
