@@ -2,7 +2,7 @@
     //функция подключения к бд
     function connect_db(){
         //запрос файла конфигов
-        require('config.php');
+        require('../config/config.php');
         $connect=mysqli_connect($db_config['host'],$db_config['user'],$db_config['password'],$db_config['db_name']);
         mysqli_set_charset($connect, $db_config['db_cod']); 
         if (!$connect){

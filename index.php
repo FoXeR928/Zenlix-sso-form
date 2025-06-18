@@ -10,10 +10,10 @@
 <body>
 <?php
     //получение имя пользователя домена
-    $name=$_SERVER['PHP_AUTH_USER'];
-    require('config.php');
+    $name=$_SERVER['REMOUT_USER'];
+    require('./config/config.php');
 ?>
-    <form method="POST" action=<?php echo $host['host'] . "/form_api/form_post.php" ?> class="form">
+    <form method="POST" action=<?php echo $host['host'] . "form_api/form_post.php" ?> class="form">
         <label>Логин пользователя: <?php echo $name; ?></label>
         <div class="conteiner flex-column">
             <label for="subj">Тема</label>

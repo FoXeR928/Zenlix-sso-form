@@ -12,27 +12,23 @@
         <tbody>
         <?php
             //подключение файла конфигов
-            require('config.php');
+            require('../config/config.php');
             //подключение файла работы с бд
-            require('db_connect.php');
+            require('../db/db_connect.php');
             //подключение файла запроса к бд
-            require('sql_query.php');
+            require('../db/sql_query.php');
             
             //получение имени пользователя
             $name=$_GET['name'];
             //получение id пользователя
             $user_id=query_sql_array("SELECT id FROM users WHERE login='$name'")['id'];
             //проверка естьли пользователь в системе
-            if($user_id==0){
-		 $user_tickets=null;
+            if($user_id==None){
                 //отправка письма о добавление пользователя
                 mail($mail_list['it_admin'], $mail_header['mail_new_user'],sprintf($mail_text['mail_no_user'],$name), $mail_header['mail_from']);
-            }else if($user==null){
-	 	$user_tickets=null; 
-	    }else{
+	        }else{
                 //запрос заявок пользователя
                 $user_tickets=query_sql_assoc(sprintf($query['get_tickets'],$user_id,$query_config['number_applications']));
-            }
             //вывод заявок пользователя
             while ($user_ticket=mysqli_fetch_assoc($user_tickets)){
                 $ticket_comments=query_sql_assoc(sprintf($query['get_comments'],$user_ticket['id']));
@@ -70,6 +66,7 @@
                         </div>
                     </td>
                 </tr>
+                <?php }?>
                 <?php }?>
             <?php }?>    
         </tbody>

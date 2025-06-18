@@ -14,5 +14,6 @@
         'add_hash'=>"UPDATE tickets SET hash_name=%s WHERE id=%s",
         'add_ticket_info'=>"INSERT INTO ticket_info SET ticket_id='%s', ticket_source='web', ip='%s', os='Windows',browser='Yandex'",
         'add_ticket_log'=>"INSERT INTO ticket_log SET date_op='%s', msg='create', init_user_id='%s', to_user_id='380', ticket_id='%s', to_unit_id='1'",
+        'get_active_tiket'=>"SELECT subj, msg, fio FROM tickets, users WHERE tickets.status=0 and users.id=tickets.client_id and tickets.unit_id=6 ORDER BY tickets.id DESC",
     );
 ?>

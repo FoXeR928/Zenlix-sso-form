@@ -10,11 +10,11 @@
 </body>
 <?php
     //подключение файла конфигов
-    require('config.php');
+    require('../config/config.php');
     //подключение файла работы с бд
-    require('db_connect.php');
+    require('../db/db_connect.php');
     //подключение файла запроса к бд
-    require('sql_query.php');
+    require('../db/sql_query.php');
 
     //получение времени и переменных post
     $add_time= date('Y-m-d H:i:s', time());
@@ -43,7 +43,7 @@
     //отправка заявки на почту
     mail($mail_to,$mail_header['mail_new_ticket'],sprintf($mail_text['mail_ticket'],$name,$subj,$msg,$ticket_id,$ip), $mail_header['mail_from']);
     //возвращение на страницу формы
-    header('Location: '. $host['host'] .'/VM/form/form.php');
+    header('Location: '. $host['host'] .'index.php');
     exit;
 ?>
 </html>

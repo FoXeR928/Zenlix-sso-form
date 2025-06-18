@@ -2,6 +2,7 @@
     //конфиг базы данных
     $host=array(
         'host'=>'http://zenlix_url',
+        'refresh'=>60
     );
     $db_config=array(
         'host'=>'localhost',
