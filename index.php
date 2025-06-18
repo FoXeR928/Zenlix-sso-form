@@ -10,7 +10,7 @@
 <body>
 <?php
     //получение имя пользователя домена
-    $name=$_SERVER['REMOUT_USER'];
+    $name=$_SERVER['PHP_AUTH_USER'];
     require('./config/config.php');
 ?>
     <form method="POST" action=<?php echo $host['host'] . "form_api/form_post.php" ?> class="form">
