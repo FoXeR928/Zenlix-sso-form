@@ -34,7 +34,7 @@ td {
 }
 .table thead tr th:first-child {
 	border-radius: 20px 0 0 0;
-    width: 10%;
+    width: 15%;
 }
 .table thead tr th:last-child {
 	border-radius: 0 20px 0 0;

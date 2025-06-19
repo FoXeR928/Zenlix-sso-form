@@ -21,9 +21,11 @@
             //получение имени пользователя
             $name=$_GET['name'];
             //получение id пользователя
-            $user_id=query_sql_array("SELECT id FROM users WHERE login='$name'")['id'];
+            $user=query_sql_array("SELECT id,login FROM users WHERE login='$name'");
+            $user_id=$user['id'];
+            $user_login=$user['login'];
             //проверка естьли пользователь в системе
-            if($user_id==None){
+            if(empty($user_login)){
                 //отправка письма о добавление пользователя
                 mail($mail_list['it_admin'], $mail_header['mail_new_user'],sprintf($mail_text['mail_no_user'],$name), $mail_header['mail_from']);
 	        }else{

@@ -48,7 +48,7 @@
         //создание переменной для запроса списка заявок
         $get=array('name'=>$name);
         //отправка запроса к списку заявок
-        $url=$host['host'] . '/form_api/user_list_get.php?';
+        $url=$host['host'] . 'form_api/user_list_get.php?';
         $list=file_get_contents($url . http_build_query($get));
         //вывод списка заявок
         echo $list;
